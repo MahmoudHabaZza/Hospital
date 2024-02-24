@@ -1,19 +1,19 @@
 <!-- Title -->
 <title> Valex -  Premium dashboard ui bootstrap rwd admin html5 template </title>
 <!-- Favicon -->
-<link rel="icon" href="{{URL::asset('build/assets/Dashboard/img/brand/favicon.png')}}" type="image/x-icon"/>
+<link rel="icon" href="{{URL::asset('assets/Dashboard/img/brand/favicon.png')}}" type="image/x-icon"/>
 <!-- Icons css -->
-<link href="{{URL::asset('build/assets/Dashboard/css/icons.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/Dashboard/css/icons.css')}}" rel="stylesheet">
 <!--  Custom Scroll bar-->
-<link href="{{URL::asset('build/assets/Dashboard/plugins/mscrollbar/jquery.mCustomScrollbar.css')}}" rel="stylesheet"/>
+<link href="{{URL::asset('assets/Dashboard/plugins/mscrollbar/jquery.mCustomScrollbar.css')}}" rel="stylesheet"/>
 <!--  Sidebar css -->
-<link href="{{URL::asset('build/assets/Dashboard/plugins/sidebar/sidebar.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/Dashboard/plugins/sidebar/sidebar.css')}}" rel="stylesheet">
 <!-- Sidemenu css -->
-<link rel="stylesheet" href="{{URL::asset('build/assets/Dashboard/css-rtl/sidemenu.css')}}">
+<link rel="stylesheet" href="{{URL::asset('assets/Dashboard/css-rtl/sidemenu.css')}}">
 @yield('css')
 <!--- Style css -->
-<link href="{{URL::asset('build/assets/Dashboard/css-rtl/style.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/Dashboard/css-rtl/style.css')}}" rel="stylesheet">
 <!--- Dark-mode css -->
-<link href="{{URL::asset('build/assets/Dashboard/css-rtl/style-dark.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/Dashboard/css-rtl/style-dark.css')}}" rel="stylesheet">
 <!---Skinmodes css-->
-<link href="{{URL::asset('build/assets/Dashboard/css-rtl/skin-modes.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/Dashboard/css-rtl/skin-modes.css')}}" rel="stylesheet">

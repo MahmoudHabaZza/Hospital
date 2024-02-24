@@ -13,7 +13,7 @@
 	<body class="main-body bg-primary-transparent">
 		<!-- Loader -->
 		<div id="global-loader">
-			<img src="{{URL::asset('build/assets/Dashboard/img/loader.svg')}}" class="loader-img" alt="Loader">
+			<img src="{{URL::asset('assets/Dashboard/img/loader.svg')}}" class="loader-img" alt="Loader">
 		</div>
 		<!-- /Loader -->
 		@yield('content')		
