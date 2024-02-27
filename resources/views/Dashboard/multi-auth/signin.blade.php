@@ -31,25 +31,35 @@
 										<div class="mb-5 d-flex"> <a href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/Dashboard/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Va<span>le</span>x</h1></div>
 										<div class="card-sigin">
 											<div class="main-signup-header">
-												<h2>مرحبا بك</h2>
-												<h5 class="font-weight-semibold mb-4">قم بتسجيل الدخول للمتابعة</h5>
+												<h2>{{ trans('Dashboard/multi-auth.welcome_back') }}</h2>
+												<h5 class="font-weight-semibold mb-4">{{ trans('Dashboard/multi-auth.please_sign_in') }}</h5>
+												<div class="form-group">
+													@if($errors->any())
+														@foreach ( $errors->all() as $error )
+															<div class="alert alert-danger">
+																{{ $error }}
+															</div>
+														@endforeach
+													@endif
+												</div>
 												<div class='form-group'>
 												<select class="form-control" id="Choose-Role" >
-													<option value="" selected disabled>حدد طريقة الدخول</option>
-													<option value="user">الدخول كمستخدم</option>
-													<option value="admin">الدخول كأدمن</option>
+													<option value="" selected disabled>{{ trans('Dashboard/multi-auth.sign_way') }}</option>
+													<option value="user">{{ trans('Dashboard/multi-auth.login_as_user') }}</option>
+													<option value="admin">{{ trans('Dashboard/multi-auth.login_as_admin') }}</option>
 												  </select>
 												</div>
+												
 
 												<div class="panel" id='user'>
 													<form action="{{ route('user.login') }}" method='POST'>
 														@csrf
 													<div class="form-group">
-														<label>Email</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+														<label>{{ trans('Dashboard/multi-auth.email') }}</label> <input class="form-control" placeholder="{{ trans('Dashboard/multi-auth.enter_email') }}" type="email" name="email" value="{{ old('email') }}" required autofocus>
 													</div>
 													<div class="form-group">
-														<label>Password</label> <input class="form-control" placeholder="Enter your password" type="password"  autocomplete="current-password" required  name="password">
-													</div><button class="btn btn-main-primary btn-block">Sign In</button>
+														<label>{{ trans('Dashboard/multi-auth.password') }}</label> <input class="form-control" placeholder="{{ trans('Dashboard/multi-auth.enter_password') }}" type="password"  autocomplete="current-password" required  name="password">
+													</div><button class="btn btn-main-primary btn-block">{{ trans('Dashboard/multi-auth.sign_in') }}</button>
 													<div class="row row-xs">
 														<div class="col-sm-6">
 															<button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signup with Facebook</button>
@@ -63,11 +73,11 @@
 													<form action="{{ route('admin.login') }}" method="POST">
 														@csrf
 													<div class="form-group">
-														<label>Email</label> <input class="form-control" placeholder="Enter your email"  name="email" value="{{ old('email') }}" autofocus required type="email">
+														<label>{{ trans('Dashboard/multi-auth.email') }}</label> <input class="form-control" placeholder="{{ trans('Dashboard/multi-auth.enter_email') }}"  name="email" value="{{ old('email') }}" autofocus required type="email">
 													</div>
 													<div class="form-group">
-														<label>Password</label> <input class="form-control" placeholder="Enter your password" name="password" autocomplete="current-password" required type="password">
-													</div><button class="btn btn-main-primary btn-block">Sign In</button>
+														<label>{{ trans('Dashboard/multi-auth.password') }}</label> <input class="form-control" placeholder="{{ trans('Dashboard/multi-auth.enter_password') }}" name="password" autocomplete="current-password" required type="password">
+													</div><button class="btn btn-main-primary btn-block">{{ trans('Dashboard/multi-auth.sign_in') }}</button>
 													<div class="row row-xs">
 														<div class="col-sm-6">
 															<button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signup with Facebook</button>

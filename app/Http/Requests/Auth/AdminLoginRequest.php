@@ -28,7 +28,7 @@ class AdminLoginRequest extends FormRequest
     {
         return [
             'email' => ['required', 'string', 'email'],
-            'password' => ['required', 'string'],
+            'password' => ['required', 'string','min:8'],
         ];
     }
 
@@ -45,7 +45,11 @@ class AdminLoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
+                'email.required' => trans('validation.required'),
+                'password.required' => trans('validation.required'),
+                'password.min' => trans('Dashboard/multi-auth.password-min'),                
                 'email' => trans('auth.failed'),
+                'password' => trans('auth.password')
             ]);
         }
 
