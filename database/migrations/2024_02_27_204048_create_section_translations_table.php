@@ -21,7 +21,6 @@ return new class extends Migration
 
             // Translated Columns
             $table->string('name');
-            $table->text('description');
 
 
 

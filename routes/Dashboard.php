@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\SectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -51,6 +52,11 @@ Route::group(
             Route::get('/dashboard/user',function () {
                 return view('Dashboard.User.dashboard');
             })->middleware('auth:web')->name('dashboard.user');
+
+
+            Route::middleware('auth:admin')->group(function (){
+                Route::resource('Sections',SectionController::class);
+            });
 
 
 });

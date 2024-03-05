@@ -11,6 +11,6 @@ class Section extends Model implements TranslatableContract
 {
     use HasFactory , Translatable;
     public $translatedAttributes = [
-        'name', 'description'
+        'name'
     ];
 }
