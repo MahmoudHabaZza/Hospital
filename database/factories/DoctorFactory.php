@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Section;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,7 +25,8 @@ class DoctorFactory extends Factory
             'email_verified_at' => now(),
             'phone' =>$this->faker->phoneNumber(),
             'price' => $this->faker->randomElement(['100','200','300','400','500']),
-            
+            'status' => 1,
+            'section_id' => Section::all()->random()->id
         ];
     }
 }

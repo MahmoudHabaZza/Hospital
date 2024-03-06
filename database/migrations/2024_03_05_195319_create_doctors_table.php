@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone')->unique();
             $table->decimal('price',8,2);
+            $table->boolean('status')->default('1');
+            $table->foreignId('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->timestamps();
         });
     }

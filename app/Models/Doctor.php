@@ -17,7 +17,8 @@ class Doctor extends Model implements TranslatableContract
         'email',
         'password',
         'phone',
-        'price'
+        'price',
+        'section_id'
     ];
     
     public function image() {
